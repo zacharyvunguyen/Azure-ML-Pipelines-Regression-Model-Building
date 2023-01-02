@@ -1,4 +1,7 @@
 # Azure ML Pipelines Regression Model Building
  
 ## Setup Configuration
-## Setup Git
+## Completed Pipeline
+![](img/pipelines.png)
+## Result
+![](img/graph.png)
