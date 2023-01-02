@@ -1,14 +1,11 @@
-# Copyright (c) Microsoft. All rights reserved.
-# Licensed under the MIT license.
 
+#Import libraries
 import argparse
 import os
 from azureml.core import Run
 
-print("Cleans the input data")
+print("Clean the input data")
 
-# Get the input green_taxi_data. To learn more about how to access dataset in your script, please
-# see https://docs.microsoft.com/en-us/azure/machine-learning/how-to-train-with-datasets.
 run = Run.get_context()
 raw_data = run.input_datasets["raw_data"]
 

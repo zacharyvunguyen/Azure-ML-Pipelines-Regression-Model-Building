@@ -1,3 +1,5 @@
+
+#import libraries
 import argparse
 import os
 from azureml.core import Run
@@ -6,8 +8,6 @@ print("Transforms the renamed taxi data to the required format")
 
 run = Run.get_context()
 
-# To learn more about how to access dataset in your script, please
-# see https://docs.microsoft.com/en-us/azure/machine-learning/how-to-train-with-datasets.
 normalized_data = run.input_datasets['normalized_data']
 normalized_df = normalized_data.to_pandas_dataframe()
 
@@ -57,7 +57,7 @@ del normalized_df["dropoff_date"]
 del normalized_df["pickup_time"]
 del normalized_df["dropoff_time"]
 
-# Before you package the dataset, run two final filters on the dataset.
+# Before packaging the dataset, run two final filters on the dataset.
 # To eliminate incorrectly captured data points,
 # filter the dataset on records where both the cost and distance variable values are greater than zero.
 # This step will significantly improve machine learning model accuracy,

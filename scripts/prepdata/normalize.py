@@ -1,3 +1,5 @@
+
+#import libraries
 import argparse
 import os
 import pandas as pd
@@ -7,8 +9,6 @@ print("Replace undefined values to relavant values and rename columns to meaning
 
 run = Run.get_context()
 
-# To learn more about how to access dataset in your script, please
-# see https://docs.microsoft.com/en-us/azure/machine-learning/how-to-train-with-datasets.
 filtered_data = run.input_datasets['filtered_data']
 combined_converted_df = filtered_data.to_pandas_dataframe()
 
@@ -28,7 +28,7 @@ replaced_distance_vals_df = (replaced_stfor_vals_df.replace({"distance": ".00"},
 
 normalized_df = replaced_distance_vals_df.astype({"distance": 'float64'})
 
-
+#convert time to milliseconds
 def time_to_us(time_str):
     hh, mm , ss = map(int, time_str.split(':'))
     return (ss + 60 * (mm + 60 * hh)) * (10**6)

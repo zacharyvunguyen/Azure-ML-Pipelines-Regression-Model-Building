@@ -1,3 +1,5 @@
+
+#import libraries
 import argparse
 import os
 from azureml.core import Run
@@ -6,8 +8,6 @@ print("Merge Green and Yellow taxi data")
 
 run = Run.get_context()
 
-# To learn more about how to access dataset in your script, please
-# see https://docs.microsoft.com/en-us/azure/machine-learning/how-to-train-with-datasets.
 cleansed_green_data = run.input_datasets["cleansed_green_data"]
 cleansed_yellow_data = run.input_datasets["cleansed_yellow_data"]
 green_df = cleansed_green_data.to_pandas_dataframe()

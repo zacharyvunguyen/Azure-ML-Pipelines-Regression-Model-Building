@@ -1,0 +1,2 @@
+2023-01-02 20:41:10.789 - INFO - 5600 - azureml.train.automl._experiment_drivers.driver_utilities.validate_input:124 - Start data validation.
+2023-01-02 20:41:10.876 - INFO - 5600 - azureml.train.automl._experiment_drivers.driver_utilities.validate_input:137 - Validation service found the data has no errors.
